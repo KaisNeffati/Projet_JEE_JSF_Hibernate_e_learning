@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" class="no-js" xmlns:p="http://primefaces.org/ui" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+		<title>E-learning</title>
+		<meta name="author" content="Kais_Neffati" />
+		
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'/>
+
+	<link rel="stylesheet" href="resources/css/reset.css"/> <!-- CSS reset -->
+	
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="resources/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/component.css" />
+		
+		<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css"/>
+		
+		
+		<script src="resources/js/modernizr.custom.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Lakki+Reddy' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+
+		<STYLE>
+		.form-control{
+		 margin-top: 10px;
+		}
+		.btn {
+    padding: 10% 40%;
+    margin-bottom:10%;
+    border-color: #E0DEDE;
+    font-family: cursive;
+		</STYLE>
+		
+	</head>
+<body class="demo-1">
+
+<div class="container" style="
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 0;
+    background-color: #DFB26E;">
+	<header>
+				<h1>Bonjour Admin</h1>	
+			</header> 
+
+
+	</div>
+		<div class="container ko">
+			<ul id="gn-menu" class="gn-menu-main" style="border-bottom: 1px #c0c0c0 solid;">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller" style="border-right: 15px Black solid;">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search"/>
+									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+								</li>
+															
+										<li><a class="gn-icon gn-icon-article">Home</a></li>
+										<li><a class="gn-icon gn-icon-pictures" href="page/a propos.xhtml">A propos</a></li>
+										<li><a class="gn-icon gn-icon-videos" href="page/Contact.xhtml">Contact</a></li>
+								
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="#0">K-N-F E-LEARNING</a></li>
+				<li><a href="prefesseur.xhmtl">Gestion de professeur</a></li>
+				<li><a href="#0">Gestion des etudiant</a></li>
+				<li><a href="#0">Gestion des cours</a></li>
+				<li><a class="codrops-icon codrops-icon-drop" href="#0"><span>Sing in</span></a></li>
+
+
+				
+			</ul>
+
+  <hr/>
+  <h:form>
+      <h:dataTable value="#{ProfCtr.listProf}" var="prof">
+        
+         <h:column>
+            <f:facet name="header">ID</f:facet>
+            #{prof.idProf}
+         </h:column>
+         <h:column>    				
+            <f:facet name="header">Name</f:facet>    				
+            #{prof.nomProf}
+         </h:column>
+         <h:column>
+            <f:facet name="header">prenom</f:facet>
+            #{prof.prenomProf}
+         </h:column>
+         <h:column>
+            <f:facet name="header">date naissance</f:facet>
+            #{prof.dateNaissance}
+         </h:column>
+         <h:column>
+            <f:facet name="header">email</f:facet>
+            #{prof.email}
+         </h:column>
+         
+        
+         
+         <h:column>
+            <f:facet name="header">specialite</f:facet>
+            #{prof.specialite}
+         </h:column>
+         
+         <h:column>
+            <f:facet name="header">tel</f:facet>
+            #{prof.tel}
+         </h:column>
+         
+         <h:column>
+            <f:facet name="header">titre</f:facet>
+            #{prof.titre}
+         </h:column>
+         
+         <h:column>
+            <f:facet name="header">universite</f:facet>
+            #{prof.universite}
+         </h:column>
+         			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Supprimer" />
+				</f:facet>
+				<h:commandLink actionListener="#{ProfCtr.supprimer(prof)}"
+					value="Supprimer" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="edit" />
+				</f:facet>
+				<h:commandLink action="#{ProfCtr.Edit(prof)}" value="Edit" />
+			</h:column>
+      </h:dataTable>
+   </h:form>
+  
+  
+  <div class="container" style="
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+">
+	 <h1>Get Started</h1>  <br/>      
+      <hr/>
+<div class="row">
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">JAVA</button>
+   </div>
+  	<div class="col-xs-4  text-center">
+  	    <button class="btn btn-default pull-right">C</button>
+   </div>
+  	<div class="col-xs-4  text-center">
+  	    <button class="btn btn-default pull-right">C++</button>
+   </div>
+  	<div class="col-xs-4  text-center">
+  	    <button class="btn btn-default pull-right">Web</button>
+   </div>
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Python</button>
+   </div>
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">JEE</button>
+   </div>
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Mobile</button>
+   </div>
+    <div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Mobile</button>
+   </div>
+     	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Mobile</button>
+   </div>
+
+  	
+  	</div>
+  	<hr/>
+   </div> 
+</div>
+
+  
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">Copyright ©2015 K-N-F PRODUCTION, V.0</p>
+  </div>
+</div>
+
+	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li style="font-size: xx-large;font-family: initial;padding-bottom: 25px;padding-top: 30px;"><a href="#0">Sign in</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<h:form id="mainForm">
+			<h:panelGrid columns="3">
+
+				<h:outputText style="width:100px" value="login :"/>
+				<p:inputText id="j_username" styleclass="full-width has-padding has-border"
+					value="#{login_utilisateur.userName}"/>
+				<p:message for="j_username" style="color:red;" />
+				<h:outputText style="width:100px" value="mot de passe :"/>
+				<p:inputText id="j_password" styleclass="full-width has-padding has-border"
+					value="#{login_utilisateur.userPassWord}"/>
+				<p:message for="j_password" style="color:red;" />
+				<h:column/>
+				<p:commandButton action="#{login_utilisateur.connecter}" value="se Connecter"/>
+
+			</h:panelGrid>
+
+
+		</h:form>
+		<p:messages autoUpdate="true"></p:messages>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail"/>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password"/>
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/js/main.js"></script> <!-- Gem jQuery -->
+
+		
+		
+		
+		<script src="resources/js/classie.js"></script>
+		<script src="resources/js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>		
+
+	</body>
+</html>

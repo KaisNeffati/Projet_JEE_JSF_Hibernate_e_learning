@@ -1,0 +1,123 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui" template="/facelet/layout.xhtml">
+	<ui:define name="contentLeft">
+	</ui:define>
+	<ui:define name="contentCenter">
+<div class="container" style="
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 0;
+    background-color: #DFB26E;">
+	<header>
+				<h1>Learn with us<span>Whether you are just starting out or are a tech industry pro, we are here to provide you with the tools to help you excel. <a href="http://www.google.com">Study Hard</a> page</span></h1>	
+			</header> 
+ <hr/>
+  <div class="container" style="
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+">
+	 <h1>Get Started</h1>  <br/>      
+      <hr/>
+<div class="row">
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">JAVA</button>
+   </div>
+  	<div class="col-xs-4  text-center">
+  	    <button class="btn btn-default pull-right">C</button>
+   </div>
+  	<div class="col-xs-4  text-center">
+  	    <button class="btn btn-default pull-right">C++</button>
+   </div>
+  	<div class="col-xs-4  text-center">
+  	    <button class="btn btn-default pull-right">Web</button>
+   </div>
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Python</button>
+   </div>
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">JEE</button>
+   </div>
+  	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Mobile</button>
+   </div>
+    <div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Mobile</button>
+   </div>
+     	<div class="col-xs-4 text-center">
+  	    <button class="btn btn-default pull-right">Mobile</button>
+   </div>
+
+  	
+  	</div>
+  	<hr/>
+   </div> 
+</div>
+
+  
+
+<div id="footer">
+
+</div>
+
+	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li style="font-size: xx-large;font-family: initial;padding-bottom: 25px;padding-top: 30px;"><a href="#0">Sign in</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<h:form id="mainForm">
+			<h:panelGrid columns="3">
+
+				<h:outputText style="width:100px" value="login :"/>
+				<p:inputText id="j_username" styleclass="full-width has-padding has-border"
+					value="#{login_utilisateur.userName}"/>
+				<p:message for="j_username" style="color:red;" />
+				<h:outputText style="width:100px" value="mot de passe :"/>
+				<p:inputText id="j_password" styleclass="full-width has-padding has-border"
+					value="#{login_utilisateur.userPassWord}"/>
+				<p:message for="j_password" style="color:red;" />
+				<h:column/>
+				<p:commandButton action="#{login_utilisateur.connecter}" value="se Connecter"/>
+	<a href="page/Registrer.xhtml" style="padding-left: 7px;text-decoration: underline;">Register</a>
+					
+			</h:panelGrid>
+
+
+		</h:form>
+		<p:messages autoUpdate="true"></p:messages>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail"/>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password"/>
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+	
+	</ui:define>
+</ui:composition>

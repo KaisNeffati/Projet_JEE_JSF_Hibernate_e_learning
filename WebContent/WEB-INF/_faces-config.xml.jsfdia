@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{login_utilisateur.connecter}:#page#Interface_admin#professeur.xhtml"
+    NAME="output" PATH="/page/Interface_admin/professeur.xhtml"
+    TARGET="rules:#page#Interface_admin#professeur.xhtml"
+    TITLE="#{login_utilisateur.connecter}:success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Failure:#{login_utilisateur.connecter}:#login.xhtml"
+    NAME="output1" PATH="/login.xhtml" TARGET="rules:#login.xhtml"
+    TITLE="#{login_utilisateur.connecter}:Failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#page#Interface_admin#professeur.xhtml"
+  PATH="/page/Interface_admin/professeur.xhtml" SHAPE="264,200,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#page#Interface_admin#professeur.xhtml:0"
+   NAME="item" PATH="/page/Interface_admin/professeur.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="edit:#{ProfCtr.Edit(prof)}:#page#Interface_admin#Modifier.xhtml"
+    NAME="output" PATH="/page/Interface_admin/Modifier.xhtml"
+    TARGET="rules:#page#Interface_admin#Modifier.xhtml"
+    TITLE="#{ProfCtr.Edit(prof)}:edit" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#page#Interface_admin#Modifier.xhtml"
+  PATH="/page/Interface_admin/Modifier.xhtml" SHAPE="32,273,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

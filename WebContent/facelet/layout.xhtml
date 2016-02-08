@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" class="no-js" xmlns:p="http://primefaces.org/ui" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+		<title>E-learning</title>
+		<meta name="author" content="Kais_Neffati" />
+		
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'/>
+
+	<link rel="stylesheet" href="resources/css/reset.css"/> <!-- CSS reset -->
+	
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="resources/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css"/>
+		
+		
+		<script src="resources/js/modernizr.custom.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Lakki+Reddy' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+
+		<STYLE>
+		.form-control{
+		 margin-top: 10px;
+		}
+		.btn {
+    padding: 10% 40%;
+    margin-bottom:10%;
+    border-color: #E0DEDE;
+    font-family: cursive;
+		</STYLE>
+		
+	</head>
+<h:body class="demo-1">
+	<div id="main">
+		<div id="header"><ui:include src="./menu.xhtml"/></div>
+
+		<div id="content">
+			<div id="content-left">
+				<ui:insert name="contentLeft"/>
+			</div>
+			<div id="content-center">
+				<ui:insert name="contentCenter"/>
+			</div>
+			<div id="content-right">
+				<ui:insert name="contentRight"/>
+			</div>
+		</div>
+		<div id="footer">
+	   	  <div class="container">
+    			<p class="text-muted">Copyright ©2015 K-N-F PRODUCTION, V.0</p>
+  			</div>
+		</div>
+	</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="resources/js/main.js"></script> <!-- Gem jQuery -->
+		<script src="resources/js/classie.js"></script>
+		<script src="resources/js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+</h:body>
+</html>

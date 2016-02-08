@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+		<title>E-learning</title>
+		<meta name="author" content="Kais_Neffati" />
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/component.css" />
+		
+		<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css"/>
+		
+		
+		<script src="resources/js/modernizr.custom.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Lakki+Reddy' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/styles.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<STYLE>
+		.form-control{
+		 margin-top: 10px;
+		}
+		</STYLE>
+		 <script src="http://code.jquery.com/jquery-latest.js"></script>
+             <script type="text/javascript">
+                 $(document).ready(function () {
+                    $('#radio1').click(function () {
+                       $('#div2').hide('700');
+                       $('#div1').show('700');
+                });
+                $('#radio2').click(function () {
+                      $('#div1').hide('700');
+                      $('#div2').show('700');
+                 });
+               });
+</script>
+		
+	</h:head>
+<h:body class="demo-1">
+	
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main" style="border-bottom: 1px #c0c0c0 solid;">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller" style="border-right: 15px Black solid;">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search"/>
+									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+								</li>
+															
+										<li><a class="gn-icon gn-icon-article">Home</a></li>
+										<li><a class="gn-icon gn-icon-pictures">A propos</a></li>
+										<li><a class="gn-icon gn-icon-videos">Contact</a></li>
+								
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="http://google.com">K-N-F E-LEARNING</a></li>
+				<li><a class="codrops-icon codrops-icon-drop" href="http://google.com"><span>Sing in</span></a></li>
+			</ul>
+	
+  <hr/>
+  
+  
+  
+
+	<h:form>
+
+		<h:panelGrid columns="2">
+
+			<h:outputLabel value="ID" />
+			<h:inputText value="#{ProfCtr.prof.idProf}" />
+
+
+
+			<h:outputLabel value="Nom" />
+			<h:inputText value="#{ProfCtr.prof.nomProf}" />
+
+
+			<h:outputLabel value="Prenom" />
+			<h:inputText value="#{ProfCtr.prof.prenomProf}" />
+
+
+
+			<h:outputLabel value="Adresse" />
+			<h:inputText value="#{ProfCtr.prof.adrPro}" />
+			
+						<h:outputLabel value="email" />
+			<h:inputText value="#{ProfCtr.prof.email}" />
+
+
+
+			<h:outputLabel value="specialite" />
+			<h:inputText value="#{ProfCtr.prof.specialite}" />
+
+
+			<h:outputLabel value="tel" />
+			<h:inputText value="#{ProfCtr.prof.tel}" />
+
+
+
+			<h:outputLabel value="titre" />
+			<h:inputText value="#{ProfCtr.prof.titre}" />
+			
+						<h:outputLabel value="universiter" />
+			<h:inputText value="#{ProfCtr.prof.universite}" />
+    
+    	    <p:outputLabel for="popup" value="Popup:" />
+        	<p:calendar id="popup" value="#{ProfCtr.prof.dateNaissance}" />
+			
+			<h:commandButton action="#{ProfCtr.ajouterProf}" value="Ajouter Client" />
+
+
+		</h:panelGrid>
+
+	</h:form>
+</div>
+  
+
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">Copyright ©2015 K-N-F PRODUCTION, V.0</p>
+  </div>
+</div>
+
+		<script src="../resources/js/classie.js"></script>
+		<script src="../resources/js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>		
+
+	</h:body>
+</html>
